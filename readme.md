@@ -1,7 +1,7 @@
 ## Website using the unsplash API
 ## Demo
 
-https://google.com
+https://chapst1.github.io/Gallery-API-Unsplash/
 
 
 ## Screenshots
