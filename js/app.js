@@ -1,12 +1,10 @@
 import { API, RANDOM } from "./api.js";
-import { navigation } from "./nav.js";
+import { accessKey, secretKey } from "./config.js";
 
 //variable
-const accessKey = "K-rbAXsWHZp9Wn_BpIkdDYESaR3Et_99ql4TFohhn-4";
-const secretKey = "YUtsn8ARZKVUe3fPul3FCaK0IrajRai_GiQt7zBGOTg";
-
 //navegacion
-const nav = document.querySelector('.menu-hamburguer');
+const menu = document.querySelector('.menu-hamburguer');
+const nav = document.querySelector('.nav');
 
 //Busqueda
 const input = document.querySelector('.form__search');
@@ -18,7 +16,10 @@ const main = document.querySelector('.app-img')
 const btnMore = document.querySelector('.buttons__more');
 
 
-nav.addEventListener('click', () => navigation(nav));
+menu.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    menu.classList.toggle('menu-active');
+});
 
 /* photos randoms */
 const urlRandom = `https://api.unsplash.com/photos/random?client_id=${accessKey}&count=30`;
